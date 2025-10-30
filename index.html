@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MemoMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>📜 History</h2>
+    <ul id="completedNotes"></ul>
+  </div>
+
+  <div class="main">
+    <div class="container">
+      <h1>☁️ MemoMaster</h1>
+      <form id="noteForm">
+        <input type="text" id="noteInput" placeholder="Write your note..." required />
+        <button type="submit">Add Note</button>
+      </form>
+
+      <h2>Work in Progress</h2>
+      <ul id="activeNotes"></ul>
+    </div>
+  </div>
+
+  <!-- Context Menu -->
+  <div id="contextMenu" class="context-menu">
+    <ul>
+      <li id="editNote">✏️ Edit</li>
+      <li id="deleteNote">🗑️ Delete</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

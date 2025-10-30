@@ -1,0 +1,134 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("2.jpg") no-repeat right center;
+  background-size: contain;
+  background-color: #f8d7da;
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Sidebar on LEFT side */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: rgba(173, 216, 230, 0.9);
+  color: #333;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 2px solid #ccc;
+  backdrop-filter: blur(4px);
+}
+
+/* Main memo container */
+.container {
+  position: relative;
+  margin-left: 300px;   /* pushes it away from sidebar */
+  width: 700px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.container h1 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Notes inside sidebar */
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0D47A1;
+}
+
+.sidebar ul li {
+  background: lightpink;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  word-wrap: break-word;
+  color: #333;
+}
+
+/* Notes list (main area) */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #4FC3F7;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  word-wrap: break-word;
+  cursor: context-menu;
+  color: white;
+}
+
+/* Context menu */
+.context-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.context-menu ul li {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.context-menu ul li:hover {
+  background: #f1f1f1;
+}
